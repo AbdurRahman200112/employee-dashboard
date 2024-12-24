@@ -16,3 +16,5 @@ export * from "@/pages/dashboard/LiveMetrics";
 export * from "@/pages/dashboard/EmployeeDetails";
 export * from "@/pages/dashboard/AddEmployee";
 export * from "@/pages/dashboard/EditEmployee";
+export * from "@/pages/dashboard/EditProfile";
+export * from "@/pages/dashboard/BreakTypes";

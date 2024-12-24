@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, Profile, Tables, Notifications, MessagesCard, TimeTracking, FullTimeEmployees, PartTimeEmployees, Approval, EmployeeMap, EmployeeDetails, Adhoc, ApprovalEdit, LiveMetrics, AddEmployee, EditEmployee } from "@/pages/dashboard";
+import { Home, Profile, Tables, Notifications, MessagesCard, TimeTracking, FullTimeEmployees, PartTimeEmployees, Approval, EmployeeMap, EmployeeDetails, EditProfile , Adhoc, ApprovalEdit, LiveMetrics, AddEmployee, EditEmployee,  BreakTypes } from "@/pages/dashboard";
 import { SignIn, SignUp, ForgotPassword, ResetPassword } from "@/pages/auth";
 import { CiGrid42 } from "react-icons/ci";
 import { UserGroupIcon } from "@heroicons/react/24/solid";
@@ -101,6 +101,12 @@ const routes = [
             path: "/AddEmployee",
             element: <AddEmployee />,
           },
+          {
+            icon: <IoMdSettings {...icon} />,
+            name: "Break Types",
+            path: "/BreakTypes",
+            element: <BreakTypes />,
+          },
         ],
       },
       {
@@ -121,12 +127,23 @@ const routes = [
         path: "/messagesCard",
         element: <MessagesCard />,
       },
-    
+      {
+        icon: <IoMdSettings {...icon} />,
+        name: "Edit Profile",
+        path: "/edit-profile/:id",
+        element: <EditProfile />
+      },
       {
         icon: <IoMdSettings {...icon} />,
         name: "Full Time",
         path: "/FullTimeEmployees",
         element: <FullTimeEmployees />,
+      },
+      {
+        icon: <IoMdSettings {...icon} />,
+        name: "Break Types",
+        path: "/BreakTypes",
+        element: <BreakTypes />,
       },
       {
         icon: <IoMdSettings {...icon} />,
@@ -186,7 +203,6 @@ const routes = [
       },
 
       // <Route path="/dashboard/employeeDetails/edit/:id" element={<EditEmployee />} />
-
     ],
   },
   {
